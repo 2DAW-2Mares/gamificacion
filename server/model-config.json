@@ -50,5 +50,13 @@
   "Usuario": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "Marcador": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "Miembro": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

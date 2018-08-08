@@ -1,0 +1,29 @@
+{
+  "name": "Marcador",
+  "plural": "Marcadores",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "puntos": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "prueba": {
+      "type": "belongsTo",
+      "model": "Prueba",
+      "foreignKey": ""
+    },
+    "grupo": {
+      "type": "belongsTo",
+      "model": "Grupo",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
