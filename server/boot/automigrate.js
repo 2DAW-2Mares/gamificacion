@@ -1,23 +1,30 @@
 module.exports = function (app) {
-  app.dataSources.mysqlDs.automigrate(null, function (err) {
-    if (err) throw err;
-
-    app.models.Juego.create([{
-      nombre: 'Corro de la patata',
-      descripcion: 'El mítico juego',
-      grupal: true
-    }, {
-      nombre: 'Salto de la comba',
-      descripcion: 'Otra forma de hacer ejercicio',
-      grupal: false
-    }, {
-      nombre: 'La zapatilla por detrás',
-      descripcion: '¿Quién la tendrá?',
-      grupal: true
-    }], function (err, juegos) {
+  if (process.env.AUTOMIGRATE === "true") {
+    app.dataSources.mysqlDs.automigrate(null, function (err) {
       if (err) throw err;
-
-      console.log('Models created: \n', juegos);
+      console.log("Modelos creados");
+      app.loadFixtures()
+        .then(function () {
+          insertaCoordinadores(app);
+        })
+        .catch(function (err) {
+          console.log('Errors:', err);
+        });
     });
-  });
+  }
 };
+
+function insertaCoordinadores(app) {
+  app.models.Juego.find({}, function (err, juegos) {
+    let coordinadores = juegos.map((juego) => {
+      console.log(juego);
+      return new Promise((resolve) => {
+        console.log('Llamando a add con id: ' + juego.id);
+        juego.coordinadores.add(juego.id, resolve);
+      });
+    });
+
+    Promise.all(coordinadores).then(() => console.log('Datos cargados correctamente!'));
+  })
+
+}
