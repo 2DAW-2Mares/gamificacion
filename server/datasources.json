@@ -1,16 +1,7 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory"
-  },
-  "mysqlDs": {
-    "host": "localhost",
-    "port": 3306,
-    "url": "",
-    "database": "gamificacion",
-    "password": "alumno",
-    "name": "mysqlDs",
-    "user": "alumno",
-    "connector": "mysql"
+    "connector": "memory",
+    "file": "mydata.json"
   }
 }
