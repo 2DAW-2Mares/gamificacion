@@ -9,7 +9,7 @@ Juego:
     nombre: "{{lorem.sentence}}"
     descripcion: "Descripción del juego @juego{@}"
     grupal: "{{random.boolean}}"
-    imagen: "{{image.image}}"
+    imagen: "imagen.gif"
     creador: @usuario.*
 
 Prueba:
@@ -30,10 +30,10 @@ Marcador:
   marcador{1..20}:
     pruebaId: @prueba.*
     grupoId: @grupo.*
-    puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
+    puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 10; })()"
 
 Miembro:
-  marcador{1..20}:
+  miembro{1..20}:
     usuarioId: @usuario.*
     grupoId: @grupo.*
     puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
