@@ -9,9 +9,6 @@
     "nombre": {
       "type": "string",
       "required": true
-    },
-    "avatar": {
-      "type": "string"
     }
   },
   "validations": [],
@@ -32,6 +29,14 @@
       "model": "Usuario",
       "foreignKey": "",
       "through": "Miembro"
+    },
+    "avatar": {
+      "type": "hasOne",
+      "model": "Imagen",
+      "polymorphic": {
+        "foreignKey": "imageableId",
+        "discriminator": "imageableType"
+      }
     }
   },
   "acls": [

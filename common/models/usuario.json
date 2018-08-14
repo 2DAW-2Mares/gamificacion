@@ -5,11 +5,7 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "avatar": {
-      "type": "string"
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "coordinaciones": {
@@ -27,6 +23,14 @@
       "model": "Grupo",
       "foreignKey": "",
       "through": "Miembro"
+    },
+    "avatar": {
+      "type": "hasOne",
+      "model": "Imagen",
+      "polymorphic": {
+        "foreignKey": "imageableId",
+        "discriminator": "imageableType"
+      }
     }
   },
   "acls": [
