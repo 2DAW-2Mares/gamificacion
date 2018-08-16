@@ -39,4 +39,18 @@ conf.db = {
   connector: process.env.DB_CONNECTOR || 'mysql'
 };
 
+// La configuración para poder enviar emails
+conf.email = {
+  transports: [{
+    type: "SMTP",
+    host: "smtp.gmail.com",
+    secure: true,
+    port: 465,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD
+    }
+  }]
+};
+
 module.exports = conf;

@@ -2,6 +2,7 @@ Usuario:
   usuario{1..10}:
     email: "usuario{@}@ies2mares.ies"
     password: "alumno"
+    emailVerified: "{{random.boolean}}"
 
 Juego:
   juego{1..5}:

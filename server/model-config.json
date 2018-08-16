@@ -49,7 +49,10 @@
   },
   "Usuario": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "Marcador": {
     "dataSource": "db",
@@ -62,5 +65,8 @@
   "Imagen": {
     "dataSource": "db",
     "public": true
+  },
+  "Email": {
+    "dataSource": "Email"
   }
 }
