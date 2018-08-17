@@ -53,4 +53,27 @@ conf.email = {
   }]
 };
 
+// Configura la autenticación con Google
+// TODO probar con el módulo passport-google-oauth2
+conf.providers = {
+  googleLogin: {
+    provider: "google",
+    module: "passport-google-oauth",
+    strategy: "OAuth2Strategy",
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: url.format({
+      protocol: 'http',
+      slashes: true,
+      hostname: conf.hostname,
+      port: conf.port,
+      pathname: "/auth/google/callback"
+    }),
+    authPath: "/auth/google",
+    callbackPath: "/auth/google/callback",
+    successRedirect: "/",
+    scope: ["email", "profile"]
+  }
+};
+
 module.exports = conf;
