@@ -38,5 +38,9 @@
   "Prueba": {
     "dataSource": "db",
     "public": true
+  },
+  "Juego": {
+    "dataSource": "db",
+    "public": true
   }
 }
