@@ -35,6 +35,10 @@
     "dataSource": "db",
     "public": false
   },
+  "Usuario": {
+    "dataSource": "db",
+    "public": true
+  },
   "Prueba": {
     "dataSource": "db",
     "public": true
