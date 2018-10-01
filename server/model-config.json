@@ -38,5 +38,13 @@
   "Usuario": {
     "dataSource": "db",
     "public": true
+  },
+  "Prueba": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Juego": {
+    "dataSource": "db",
+    "public": true
   }
 }
