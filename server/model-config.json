@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysqlDs"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -36,19 +36,19 @@
     "public": false
   },
   "Grupo": {
-    "dataSource": "db",
+    "dataSource": "mysqlDs",
     "public": true
   },
   "Usuario": {
-    "dataSource": "db",
+    "dataSource": "mysqlDs",
     "public": true
   },
   "Prueba": {
-    "dataSource": "db",
+    "dataSource": "mysqlDs",
     "public": true
   },
   "Juego": {
-    "dataSource": "db",
+    "dataSource": "mysqlDs",
     "public": true
   }
 }
