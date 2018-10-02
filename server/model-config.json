@@ -35,6 +35,10 @@
     "dataSource": "db",
     "public": false
   },
+  "Grupo": {
+    "dataSource": "db",
+    "public": true
+  },
   "Usuario": {
     "dataSource": "db",
     "public": true
