@@ -23,5 +23,24 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "prototype.getName": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "nombre",
+          "type": "string",
+          "root": false,
+          "description": "Nombre"
+        }
+      ],
+      "description": "Devuelve un nombre",
+      "http": [
+        {
+          "path": "/getName",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
