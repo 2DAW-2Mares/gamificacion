@@ -1,0 +1,37 @@
+.ps {
+    text-align: center;
+    margin-top: 50px;
+}
+#pc{
+    margin: 5px;
+    display: inline-block;
+    margin-top: 100px;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: #525552;
+}
+#l {
+    padding-bottom: 5px;
+    text-align: center;
+}
+#lo {
+    display: inline;
+    border-style: solid;
+    border-color: lightslategray;
+}
+.bt{
+    margin-top: 30px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#caja{
+    text-align: center;
+}
+#img {
+    margin: 10px;
+    float: left;
+    position: fixed;
+}
