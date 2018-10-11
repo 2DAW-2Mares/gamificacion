@@ -11,7 +11,24 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "coordinadores": {
+      "type": "hasAndBelongsToMany",
+      "model": "Juego",
+      "foreignKey": ""
+    },
+    "juegos": {
+      "type": "hasMany",
+      "model": "Juego",
+      "foreignKey": "creador"
+    },
+    "grupos": {
+      "type": "hasMany",
+      "model": "Grupo",
+      "foreignKey": "",
+      "through": "Miembro"
+    }
+  },
   "acls": [],
   "methods": {}
 }

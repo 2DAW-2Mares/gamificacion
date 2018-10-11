@@ -21,7 +21,28 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "coordinadores": {
+      "type": "hasAndBelongsToMany",
+      "model": "Usuario",
+      "foreignKey": ""
+    },
+    "creador": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "creador"
+    },
+    "pruebas": {
+      "type": "hasMany",
+      "model": "Prueba",
+      "foreignKey": ""
+    },
+    "grupos": {
+      "type": "hasMany",
+      "model": "Grupo",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {
     "prototype.getNombre": {
