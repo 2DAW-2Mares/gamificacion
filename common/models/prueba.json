@@ -21,7 +21,19 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "juego": {
+      "type": "belongsTo",
+      "model": "Juego",
+      "foreignKey": ""
+    },
+    "grupos": {
+      "type": "hasMany",
+      "model": "Grupo",
+      "foreignKey": "",
+      "through": "Marcador"
+    }
+  },
   "acls": [],
   "methods": {}
 }

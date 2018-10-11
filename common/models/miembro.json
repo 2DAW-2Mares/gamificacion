@@ -1,0 +1,31 @@
+{
+  "name": "Miembro",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "validado": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grupo": {
+      "type": "belongsTo",
+      "model": "Grupo",
+      "foreignKey": ""
+    },
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
