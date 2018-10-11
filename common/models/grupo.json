@@ -15,7 +15,25 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "juego": {
+      "type": "belongsTo",
+      "model": "Juego",
+      "foreignKey": ""
+    },
+    "pruebas": {
+      "type": "hasMany",
+      "model": "Prueba",
+      "foreignKey": "",
+      "through": "Marcador"
+    },
+    "miembros": {
+      "type": "hasMany",
+      "model": "Usuario",
+      "foreignKey": "",
+      "through": "Miembro"
+    }
+  },
   "acls": [],
   "methods": {}
 }
