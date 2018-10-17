@@ -1,0 +1,42 @@
+Usuario:
+  usuario{1..10}:
+    email: "usuario{@}@ies2mares.ies"
+    password: "alumno"
+    avatar: "{{image.avatar}}"
+
+Juego:
+  juego{1..5}:
+    nombre: "{{lorem.sentence}}"
+    descripcion: "Descripción del juego @juego{@}"
+    grupal: "{{random.boolean}}"
+    imagen: "{{image.image}}"
+    creador: @usuario.*
+
+Prueba:
+  prueba{1..20}:
+    nombre: "{{lorem.sentence}}"
+    descripcion: "Descripción de la prueba @prueba{@}"
+    maximo: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
+    imagen: "{{image.image}}"
+    juegoId: @juego.*
+
+Grupo:
+  grupo{1..10}:
+    nombre: "{{company.companyName}}"
+    avatar: "{{image.avatar}}"
+    juegoId: @juego.*
+
+Marcador:
+  marcador{1..20}:
+    pruebaId: @prueba.*
+    grupoId: @grupo.*
+    puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
+
+Miembro:
+  marcador{1..20}:
+    usuarioId: @usuario.*
+    grupoId: @grupo.*
+    puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
+    token: "{{random.uuid}}"
+    validado: "{{random.boolean}}"
+
