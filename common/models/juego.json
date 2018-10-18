@@ -27,7 +27,7 @@
       "model": "Usuario",
       "foreignKey": ""
     },
-    "creador": {
+    "ownerId": {
       "type": "belongsTo",
       "model": "Usuario",
       "foreignKey": "creador"
