@@ -63,10 +63,11 @@
       "permission": "ALLOW"
     },
     {
-      "accessType": "*",
+      "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW"
+      "principalId": "$authenticate",
+      "permission": "ALLOW",
+      "property": "create"
     }
   ],
   "methods": {
