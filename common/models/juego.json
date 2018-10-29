@@ -61,6 +61,13 @@
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "esgrupal"
     }
   ],
   "methods": {
@@ -78,6 +85,24 @@
       "http": [
         {
           "path": "/getNombre",
+          "verb": "get"
+        }
+      ]
+    },
+    "esgrupal": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "juegos",
+          "type": "array",
+          "root": false,
+          "description": ""
+        }
+      ],
+      "description": "es un juego de grupo",
+      "http": [
+        {
+          "path": "/grupales",
           "verb": "get"
         }
       ]
