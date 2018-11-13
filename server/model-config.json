@@ -14,49 +14,49 @@
     ]
   },
   "User": {
-    "dataSource": "mysqlDs"
+    "dataSource": "db"
   },
   "AccessToken": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": false
   },
   "Grupo": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Usuario": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Prueba": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Juego": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Marcador": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Miembro": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   }
 }

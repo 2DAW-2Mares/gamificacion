@@ -1,6 +1,6 @@
 module.exports = function (app) {
   if (process.env.AUTOMIGRATE === "true") {
-    app.dataSources.mysqlDs.automigrate(null, function (err) {
+    app.dataSources.db.automigrate(null, function (err) {
       if (err) throw err;
       console.log("Modelos creados");
       app.loadFixtures()
