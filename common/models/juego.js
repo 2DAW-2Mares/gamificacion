@@ -18,4 +18,6 @@ module.exports = function(Juego) {
       ctx.args.data.creador = ctx.req.accessToken.userId;
       next();
     });
+    
+    Juego.validatesFormatOf('name', {with: '(http(s?):)|([/|.|\\w|\\s])*\\.(?:jpg|jpeg|gif|png|bmp|tiff|psd|svg)'});
 };
