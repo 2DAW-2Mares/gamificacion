@@ -28,7 +28,13 @@
       "type": "hasMany",
       "model": "Usuario",
       "foreignKey": "",
-      "through": "Miembro"
+      "through": "Miembro",
+      "scope": {
+        "where": {
+          "validado": true
+        },
+        "include": "usuario"
+      }
     },
     "avatar": {
       "type": "hasOne",
