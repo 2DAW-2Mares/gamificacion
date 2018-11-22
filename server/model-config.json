@@ -58,5 +58,9 @@
   "Miembro": {
     "dataSource": "db",
     "public": true
+  },
+  "Imagen": {
+    "dataSource": "db",
+    "public": true
   }
 }

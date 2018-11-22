@@ -13,9 +13,6 @@
     "descripcion": {
       "type": "string"
     },
-    "imagen": {
-      "type": "string"
-    },
     "maximo": {
       "type": "number"
     }
@@ -32,6 +29,14 @@
       "model": "Grupo",
       "foreignKey": "",
       "through": "Marcador"
+    },
+    "imagen": {
+      "type": "hasOne",
+      "model": "Imagen",
+      "polymorphic": {
+        "foreignKey": "imageableId",
+        "discriminator": "imageableType"
+      }
     }
   },
   "acls": [

@@ -13,9 +13,6 @@
     "descripcion": {
       "type": "string"
     },
-    "imagen": {
-      "type": "string"
-    },
     "grupal": {
       "type": "boolean"
     }
@@ -41,6 +38,14 @@
       "type": "hasMany",
       "model": "Grupo",
       "foreignKey": ""
+    },
+    "imagen": {
+      "type": "hasOne",
+      "model": "Imagen",
+      "polymorphic": {
+        "foreignKey": "imageableId",
+        "discriminator": "imageableType"
+      }
     }
   },
   "acls": [

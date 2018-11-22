@@ -2,14 +2,12 @@ Usuario:
   usuario{1..10}:
     email: "usuario{@}@ies2mares.ies"
     password: "alumno"
-    avatar: "{{image.avatar}}"
 
 Juego:
   juego{1..5}:
     nombre: "{{lorem.sentence}}"
     descripcion: "Descripción del juego @juego{@}"
     grupal: "{{random.boolean}}"
-    imagen: "imagen.gif"
     creador: @usuario.*
 
 Prueba:
@@ -17,13 +15,11 @@ Prueba:
     nombre: "{{lorem.sentence}}"
     descripcion: "Descripción de la prueba @prueba{@}"
     maximo: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
-    imagen: "{{image.image}}"
     juegoId: @juego.*
 
 Grupo:
   grupo{1..10}:
     nombre: "{{company.companyName}}"
-    avatar: "{{image.avatar}}"
     juegoId: @juego.*
 
 Marcador:
@@ -39,4 +35,8 @@ Miembro:
     puntos: "(function() { return (Math.floor(Math.random()*10)+1) * 100; })()"
     token: "{{random.uuid}}"
     validado: "{{random.boolean}}"
+
+Imagen:
+  imagen{1..20}:
+    url: "imagen.jpg"
 
