@@ -4,7 +4,8 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "./models"
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
     ],
     "mixins": [
       "loopback/common/mixins",
@@ -35,11 +36,11 @@
     "dataSource": "db",
     "public": false
   },
-  "Grupo": {
+  "Juego": {
     "dataSource": "db",
     "public": true
   },
-  "Usuario": {
+  "Grupo": {
     "dataSource": "db",
     "public": true
   },
@@ -47,9 +48,12 @@
     "dataSource": "db",
     "public": true
   },
-  "Juego": {
+  "Usuario": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "Marcador": {
     "dataSource": "db",
@@ -62,5 +66,34 @@
   "Imagen": {
     "dataSource": "db",
     "public": true
+  },
+  "ApplicationCredential": {
+    "dataSource": "db",
+    "public": true
+  },
+  "UserCredential": {
+    "dataSource": "db",
+    "public": true,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Usuario",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "UserIdentity": {
+    "dataSource": "db",
+    "public": true,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Usuario",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "Email": {
+    "dataSource": "Email"
   }
 }

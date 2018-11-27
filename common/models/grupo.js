@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Grupo) {
+module.exports = function (Grupo) {
 
 };
