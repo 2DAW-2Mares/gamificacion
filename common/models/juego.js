@@ -19,5 +19,4 @@ module.exports = function(Juego) {
       next();
     });
     
-    Juego.validatesFormatOf('name', {with: '(http(s?):)|([/|.|\\w|\\s])*\\.(?:jpg|jpeg|gif|png|bmp|tiff|psd|svg)'});
 };

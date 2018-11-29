@@ -28,8 +28,6 @@ conf.restApiUrl = url.format({
   pathname: conf.restApiRoot
 });
 
-module.exports = conf;
-
 conf.db = {
     host: process.env.DB_HOST || 'localhost',
     database: process.env.DB_NAME || 'gamificacion',
@@ -39,3 +37,10 @@ conf.db = {
     password: process.env.DB_PASSWORD,
     connector: process.env.DB_CONNECTOR || 'mysql'
   };
+  
+conf.adminCredentials = {
+  email: process.env.ADMIN_EMAIL,
+  password: process.env.ADMIN_PASSWORD
+};
+
+module.exports = conf;
