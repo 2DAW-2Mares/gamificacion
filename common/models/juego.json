@@ -73,6 +73,12 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "coordinadorJuego",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}

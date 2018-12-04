@@ -11,5 +11,15 @@ module.exports = function (Marcador) {
       if (self.puntos > prueba.maximo) err();
       done();
     })
-  }
+  };
+  
+  Marcador.prototype.juegoAlQuePertenece = function(cb){
+    this.prueba(function(err, prueba){
+      if(err) return cb(err);
+      
+      prueba.juego(function(err, juego){
+          cb(err, juego);
+      });
+    }); 
+  };
 };
