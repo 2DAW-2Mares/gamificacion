@@ -77,6 +77,26 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "docente",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "alumno",
+      "permission": "ALLOW",
+      "property": "__create__grupos"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
       "principalId": "coordinadorJuego",
       "permission": "ALLOW"
     }

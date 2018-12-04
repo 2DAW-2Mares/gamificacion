@@ -100,6 +100,11 @@ conf.providers = {
       hd: 'alu.murciaeduca.es'
     }
   }
+}
+  
+conf.adminCredentials = {
+  email: process.env.ADMIN_EMAIL,
+  password: process.env.ADMIN_PASSWORD
 };
 
 module.exports = conf;
